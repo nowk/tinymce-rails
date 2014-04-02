@@ -101,6 +101,7 @@ function init() {
 		setFormValue('onkeyup', inst.dom.getAttrib(elm, 'onkeyup'));
 		setFormValue('target', linkTarget);
 		setFormValue('classes', inst.dom.getAttrib(elm, 'class'));
+		setFormValue('dataga', inst.dom.getAttrib(elm, 'data-ga'));
 
 		// Parse onclick data
 		if (onclick != null && onclick.indexOf('window.open') != -1)
@@ -470,6 +471,7 @@ function setAllAttribs(elm) {
 	setAttrib(elm, 'onkeypress');
 	setAttrib(elm, 'onkeydown');
 	setAttrib(elm, 'onkeyup');
+	setAttrib(elm, 'data-ga');
 
 	// Refresh in old MSIE
 	if (tinyMCE.isMSIE5)
